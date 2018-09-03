@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Mon Aug 27 10:11:39 IST 2018
+0.baseType=DIRECTORY
+0.base=/mnt/187C7C937C7C6D7E/projects_workspaces/android/BetaNet-20180827T011029Z-001/BetaNet/app/build/intermediates/transforms/dexMerger/debug/33
+0.path=classes.dex
+0.set=DEX
+count=1

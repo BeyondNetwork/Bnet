@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BetaNet</string>
+    <string name="slogan">Find and Meet New People!</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="title_activity_login">Login</string>
+    obn
+    <string name="DontHaveAccount">Don\'t have an account?</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="name">Name</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="add_skills">Add Skills</string>
+    <string name="save">Save</string>
+    <string name="a_quick_bio">A Quick Bio!</string>
+    <string name="we_are_almost_there">We are almost there...</string>
+    <string name="add_image">Add Image</string>
+    <string name="skills">Skills</string>
+    <string name="interests">Interests</string>
+    <string name="title_activity_add_interests">AddInterests</string>
+    <string name="add_interests">Add Interests</string>
+</resources>

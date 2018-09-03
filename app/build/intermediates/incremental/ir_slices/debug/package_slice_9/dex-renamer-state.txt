@@ -1,0 +1,4 @@
+#Mon Aug 27 09:19:28 IST 2018
+base.0=/mnt/187C7C937C7C6D7E/projects_workspaces/android/BetaNet-20180827T011029Z-001/BetaNet/app/build/intermediates/transforms/dexMerger/debug/26
+path.0=classes.dex
+renamed.0=classes.dex
