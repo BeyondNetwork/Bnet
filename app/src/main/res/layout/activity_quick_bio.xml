@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuickBio">
+
+    <TextView
+        android:id="@+id/almostThereTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/we_are_almost_there"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="We are almost there..." />
+
+    <TextView
+        android:id="@+id/quickBioTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/a_quick_bio"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/almostThereTextView"
+        tools:text="A Quick Bio!" />
+
+    <FrameLayout
+        android:id="@+id/profileImageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quickBioTextView">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profileImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:src="@drawable/profile_pic"
+            android:textAlignment="center"
+            app:civ_border_color="#CCCCCC"
+            app:civ_border_width="2dp" />
+
+        <ImageButton
+            android:id="@+id/addImageLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:contentDescription="@string/add_image"
+            android:background="@drawable/add_image_button"
+            android:elevation="8dp"
+            android:src="@drawable/ic_add_white_24dp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Akshay Jawajwar"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageLayout"
+        tools:text="Akshay Jawajwar" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="jawajwarakshay@gmail.com"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        tools:text="jawajwarakshay@gmail.com" />
+
+    <TextView
+        android:id="@+id/skillsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/skills"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
+        tools:text="Skills" />
+
+    <TextView
+        android:id="@+id/addSkillsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="+ Add Skills"
+        android:textColor="#ff0000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/skillsTextView"
+        app:layout_constraintStart_toStartOf="@+id/skillsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/skillsTextView"
+        tools:text="+ Add Skills"/>
+
+    <TextView
+        android:id="@+id/interestsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/interests"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addSkillsTextView"
+        tools:text="Interests" />
+
+    <TextView
+        android:id="@+id/addInterestsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+ Add Interests"
+        android:textColor="#ff0000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/interestsTextView"
+        app:layout_constraintStart_toStartOf="@+id/interestsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/interestsTextView"
+        tools:text="+ Add Interests" />
+
+    <Button
+        android:id="@+id/saveBioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded"
+        android:drawableRight="@drawable/ic_arrow_forward_red_24dp"
+        android:elevation="16dp"
+        android:gravity="left|center_vertical"
+        android:padding="12dp"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addInterestsTextView"
+        tools:text="Save" />
+</android.support.constraint.ConstraintLayout>

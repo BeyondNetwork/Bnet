@@ -1,0 +1,4 @@
+#Tue Sep 04 12:09:56 IST 2018
+base.0=D\:\\Yash\\Codes\\Android\\BetaNet\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\34
+path.0=classes.dex
+renamed.0=classes.dex
