@@ -27,4 +27,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.madgag.spongycastle:core:1.58.0.0'
+    implementation 'com.madgag.spongycastle:prov:1.58.0.0'
+    implementation 'com.hierynomus:sshj:0.26.0'
+//    implementation 'com.madgag.spongycastle:pkix:1.54.0.0'
+//    implementation 'com.madgag.spongycastle:pg:1.54.0.0'
+
 }
