@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="D:\Yash\Codes\Android\BetaNet\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\Yash\Codes\Android\BetaNet\app\src\debug\shaders"/></dataSet></merger>
+=======
+<merger version="3"><dataSet config="main"><source path="/mnt/187C7C937C7C6D7E/projects_workspaces/android/BetaNet-20180827T011029Z-001/BetaNet/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/mnt/187C7C937C7C6D7E/projects_workspaces/android/BetaNet-20180827T011029Z-001/BetaNet/app/src/debug/shaders"/></dataSet></merger>
+>>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65

@@ -138,11 +138,23 @@ def verify():
             if data is None:
                 return "Please register first."
             else:
+<<<<<<< HEAD
+=======
+                # https://www.quora.com/What-are-the-current-best-practices-for-email-verification -> In app itself
+                # https://www.mailboxvalidator.com/resources/articles/acceptable-email-address-syntax-rfc/
+                if str(data[4]) == '1' or str(data) == 1:
+                    return "Your email-id is already verified!"
+>>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
                 _id = data[0]
                 random_number = data[5]
                 if hasher.check_verification_hash(_id, email_id, code, random_number):
                     db_cursor.execute("UPDATE {} SET {} = {} WHERE {} = '{}';"
                                       .format(user_table, 'verified', 1, 'email_id', email_id))
+<<<<<<< HEAD
+=======
+                    db_cursor.execute("UPDATE {} SET {} = '{}' WHERE {} = '{}';"
+                                      .format(user_table, 'random_number', '0', 'email_id', email_id))
+>>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
                     db.commit()
                 else:
                     return "Invalid verification link!"

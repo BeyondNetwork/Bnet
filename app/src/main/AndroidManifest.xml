@@ -7,7 +7,10 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET"/>
+=======
+>>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
 
     <application
         android:allowBackup="true"

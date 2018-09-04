@@ -52,8 +52,13 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="40dp"
             app:boxStrokeColor="@color/white"
+<<<<<<< HEAD
             app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
             android:textColorHint="@color/white"
+=======
+            android:textColorHint="@color/white"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+>>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
             app:boxBackgroundColor="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -77,8 +82,13 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="40dp"
             app:boxStrokeColor="@color/white"
+<<<<<<< HEAD
             app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
             android:textColorHint="@color/white"
+=======
+            android:textColorHint="@color/white"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+>>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
             app:boxBackgroundColor="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -104,8 +114,13 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="40dp"
             app:boxStrokeColor="@color/white"
+<<<<<<< HEAD
             app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
             android:textColorHint="@color/white"
+=======
+            android:textColorHint="@color/white"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+>>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
             app:boxBackgroundColor="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

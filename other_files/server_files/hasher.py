@@ -7,12 +7,16 @@ def hash_for_verification(_id, email_id, random_number):
     rand_email = hashlib.sha256(email_id.encode()).hexdigest()
     rand_id = hashlib.sha256(str(_id*file.mul).encode()).hexdigest()
     string = rand_id + rand_email + rand_dig + file.add
+<<<<<<< HEAD
     hash_object = hashlib.sha256(string.encode())
     hex_dig = hash_object.hexdigest()
     for i in range(10**file.power+10**(file.power-1)-1):
         hash_object = hashlib.sha256(hex_dig.encode())
         hex_dig = hash_object.hexdigest()
     return str(hex_dig[0:15] + '0' + hex_dig[16:30] + '0' + hex_dig[31:45] + '0' + hex_dig[46:])
+=======
+    return str(hashlib.sha256(str(string).encode()).hexdigest())
+>>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
 
 
 def check_verification_hash(_id, email_id, the_hash, random_number):
