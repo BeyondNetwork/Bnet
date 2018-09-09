@@ -1,30 +1,17 @@
 package com.betanet.betanet;
 
 import android.content.Intent;
-<<<<<<< HEAD
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-=======
-import android.os.Bundle;
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-<<<<<<< HEAD
 import android.util.Log;
 import android.view.View;
-import android.view.accessibility.AccessibilityManager;
-=======
-import android.view.View;
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-<<<<<<< HEAD
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -45,10 +32,7 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
     private static final String TAG = "Login";
-=======
-public class Login extends AppCompatActivity {
 
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
     EditText editTextEmail;
     EditText editTextPassword;
     TextView forgotPasswordTV;
@@ -75,7 +59,6 @@ public class Login extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
 
                 if (!editTextEmail.getText().toString().equals("")
                         && !editTextPassword.getText().toString().equals("")) {
@@ -130,9 +113,6 @@ public class Login extends AppCompatActivity {
                 } else {
                     Toast.makeText(Login.this, "Invalid Credentials", Toast.LENGTH_LONG).show();
                 }
-=======
-                Toast.makeText(Login.this, "Sign In", Toast.LENGTH_SHORT).show();
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
             }
         });
         registerFromLoginTextView.setOnClickListener(new View.OnClickListener() {
@@ -143,7 +123,6 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-<<<<<<< HEAD
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     String getHash(String password) throws NoSuchAlgorithmException {
@@ -152,6 +131,4 @@ public class Login extends AppCompatActivity {
         byte[] digest = md.digest();
         return String.format("%064x", new BigInteger(1, digest));
     }
-=======
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
 }

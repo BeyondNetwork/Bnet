@@ -1,16 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "D:\\Yash\\Codes\\Android\\BetaNet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-et\\values-et.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Yash\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0-rc01.aar\\6f29a75eb1ee7be8c0865cff3769a072\\res\\values-et\\values-et.xml",
-=======
             "outputFile": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et/values-et.xml",
             "map": [
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc01.aar/3f9ec63ae7f21da84c8c397478b710b8/res/values-et/values-et.xml",
+                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/dbb078b0b53352e9693204e5a3e90e78/res/values-et/values-et.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -20,8 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-rc01.aar/44f4294635d6ac3348c85fd8350a9a41/res/values-et/values-et.xml",
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
+                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-rc02.aar/3ba2d191e5a06b0fe21a28a4119af64c/res/values-et/values-et.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -36,19 +29,6 @@
                         "endColumns": "100",
                         "endOffsets": "3038"
                     }
-<<<<<<< HEAD
-                },
-                {
-                    "source": "C:\\Users\\Yash\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-rc01.aar\\3537577b232547a3564a2830d9c4b62c\\res\\values-et\\values-et.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,222,329,440,526,628,745,825,903,995,1089,1194,1296,1406,1500,1601,1695,1787,1880,1963,2074,2179,2278,2388,2489,2592,2758,2860",
-                        "endColumns": "116,106,110,85,101,116,79,77,91,93,104,101,109,93,100,93,91,92,82,110,104,98,109,100,102,165,101,81",
-                        "endOffsets": "217,324,435,521,623,740,820,898,990,1084,1189,1291,1401,1495,1596,1690,1782,1875,1958,2069,2174,2273,2383,2484,2587,2753,2855,2937"
-                    }
-=======
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
                 }
             ]
         }

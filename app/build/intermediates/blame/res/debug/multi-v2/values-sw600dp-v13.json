@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "D:\\Yash\\Codes\\Android\\BetaNet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Yash\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-rc01.aar\\3537577b232547a3564a2830d9c4b62c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Yash\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0-rc01.aar\\d9f5f970cfac291df2d01189c5381364\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
             "outputFile": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/design-28.0.0-rc01.aar/ff9892238681fca9e7fd839c3220b031/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -38,11 +21,9 @@
                         "endColumns": "59,69,70,71,57,57,10,63,62,10",
                         "endOffsets": "666,736,807,879,937,995,1104,1168,1231,1403"
                     }
-<<<<<<< HEAD
-=======
                 },
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc01.aar/3f9ec63ae7f21da84c8c397478b710b8/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/dbb078b0b53352e9693204e5a3e90e78/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -50,7 +31,6 @@
                         "endColumns": "68,68,69,73,75,58,70,67",
                         "endOffsets": "119,188,258,332,408,467,538,606"
                     }
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
                 }
             ]
         }

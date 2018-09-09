@@ -1,16 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "D:\\Yash\\Codes\\Android\\BetaNet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Yash\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-rc01.aar\\3537577b232547a3564a2830d9c4b62c\\res\\values-v16\\values-v16.xml",
-=======
             "outputFile": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-rc01.aar/44f4294635d6ac3348c85fd8350a9a41/res/values-v16/values-v16.xml",
+                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-rc02.aar/3ba2d191e5a06b0fe21a28a4119af64c/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,8 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc01.aar/3f9ec63ae7f21da84c8c397478b710b8/res/values-v16/values-v16.xml",
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
+                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/dbb078b0b53352e9693204e5a3e90e78/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,19 +31,6 @@
                         "endColumns": "12",
                         "endOffsets": "289"
                     }
-<<<<<<< HEAD
-                },
-                {
-                    "source": "C:\\Users\\Yash\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0-rc01.aar\\6f29a75eb1ee7be8c0865cff3769a072\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-=======
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
                 }
             ]
         }

@@ -33,15 +33,11 @@ public class QuickBio extends AppCompatActivity {
         addInterestsTextView = findViewById(R.id.addInterestsTextView);
         saveBioButton = findViewById(R.id.saveBioButton);
 
-<<<<<<< HEAD
         String user_name = getIntent().getStringExtra("user_name");
         String email = getIntent().getStringExtra("email");
 
         nameTextView.setText(user_name);
         emailTextView.setText(email);
-
-=======
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
         addImageLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
