@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-#Tue Sep 04 12:08:20 IST 2018
-base.0=D\:\\Yash\\Codes\\Android\\BetaNet\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\28
+#Wed Oct 03 08:09:03 IST 2018
+base.0=/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/transforms/dexMerger/debug/10
+path.1=classes2.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-=======
-#Mon Aug 27 09:19:26 IST 2018
-base.0=/mnt/187C7C937C7C6D7E/projects_workspaces/android/BetaNet-20180827T011029Z-001/BetaNet/app/build/intermediates/transforms/dexMerger/debug/27
-path.0=classes.dex
-renamed.0=classes.dex
->>>>>>> a51c6d12c249fbdc9ecfdeb75cdcab002241cd65
+base.1=/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/transforms/dexMerger/debug/10

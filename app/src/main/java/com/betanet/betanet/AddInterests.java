@@ -2,10 +2,7 @@ package com.betanet.betanet;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
@@ -21,8 +18,8 @@ public class AddInterests extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_interests);
-        interestsSearchView = (SearchView) findViewById(R.id.skillsSearchView);
-        backToBioButton = (Button) findViewById(R.id.backToBioButton);
+        interestsSearchView = (SearchView) findViewById(R.id.interestsSearchView);
+        backToBioButton = (Button) findViewById(R.id.interestsBackToBioButton);
         saveInterestsButton = (Button) findViewById(R.id.saveInterestsButton);
 
         backToBioButton.setOnClickListener(new View.OnClickListener() {

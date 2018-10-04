@@ -32,5 +32,10 @@ public class Start extends AppCompatActivity {
             }
         });
     }
+    public void jump(View v)
+    {
+        Intent i = new Intent(this, AddSkills.class);
+        startActivity(i);
+    }
 
 }

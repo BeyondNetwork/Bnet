@@ -4,7 +4,7 @@
             "outputFile": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0-rc01.aar/1ea7657c6c81b60b2932ee9b9b65d52f/res/values-v23/values-v23.xml",
+                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0-rc02.aar/a951768d01e896b36a382615414d5c0b/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
