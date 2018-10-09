@@ -60,11 +60,11 @@ public class Register extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         registerButton = findViewById(R.id.registerButton);
         signInFromRegisterButton = findViewById(R.id.signInFromRegisterButton);
-        editTextName = (EditText) findViewById(R.id.editTextName);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        registerButton = (Button) findViewById(R.id.registerButton);
-        signInFromRegisterButton = (TextView) findViewById(R.id.signInFromRegisterButton);
+        editTextName = findViewById(R.id.editTextName);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        registerButton = findViewById(R.id.registerButton);
+        signInFromRegisterButton = findViewById(R.id.signInFromRegisterButton);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -204,6 +204,19 @@ public class Register extends AppCompatActivity {
         KeySpec keySpec = new PBEKeySpec(passphraseOrPin, salt, iterations, outputKeyLength);
         SecretKey secretKey = secretKeyFactory.generateSecret(keySpec);
         return secretKey;
+    }
+
+    private String get_message(int val) {
+        switch (val) {
+            case 111:
+                return "This email-id has already been registered";
+            case 222:
+                return "This username already exists";
+            case 200:
+                return "User created successfully!\nAn email verification link has been sent to you.";
+            default:
+                return "An error has occurred. Please try again..";
+        }
     }
 
 }

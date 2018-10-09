@@ -784,6 +784,10 @@
         "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/dbb078b0b53352e9693204e5a3e90e78/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/res/merged/debug/layout_value_with_remove_button_layout.xml.flat",
+        "source": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/src/main/res/layout/value_with_remove_button_layout.xml"
+    },
+    {
         "merged": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/res/merged/debug/layout_activity_register.xml.flat",
         "source": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/src/main/res/layout/activity_register.xml"
     },

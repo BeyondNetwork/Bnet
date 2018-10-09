@@ -131,4 +131,18 @@ public class Login extends AppCompatActivity {
         byte[] digest = md.digest();
         return String.format("%064x", new BigInteger(1, digest));
     }
+    private String get_message(int val) {
+        switch (val) {
+            case 111:
+                return "No such email_id has been registered";
+            case 222:
+                return "Wrong Password!";
+            case 333:
+                return "Your email id has not been verified as yet.\nPlease go to the verification link sent to you via email.";
+            case 200:
+                return "Welcome!";
+            default:
+                return "An error has occurred. Please try again..";
+        }
+    }
 }
