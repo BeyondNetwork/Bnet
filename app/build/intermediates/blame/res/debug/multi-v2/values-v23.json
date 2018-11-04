@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "E:\\projects_workspaces\\android\\BNet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0-rc02.aar/a951768d01e896b36a382615414d5c0b/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\aliab\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-28.0.0-rc02.aar\\16cfad15f1f0e85f208b1de1e09eccfc\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/dbb078b0b53352e9693204e5a3e90e78/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\aliab\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-rc02.aar\\54a0817649beffe3bf82945c775f46e1\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

@@ -57,19 +57,62 @@
                 android:value=".AddSkills" />
             <meta-data
                 android:name="android.app.searchable"
-                android:resource="@xml/skill_searchable" />
+                android:resource="@xml/searchable" />
         </activity>
         <activity
             android:name="com.betanet.betanet.AddInterests"
-            android:label="@string/title_activity_add_interests"
-            android:theme="@style/AppTheme" />
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".AddInterests" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.betanet.betanet.AddProfession"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".AddProfession" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
 
         <provider
             android:name="com.betanet.betanet.SkillsProvider"
             android:authorities="com.betanet.betanet"
             android:enabled="true"
-            android:exported="false" >
-        </provider>
+            android:exported="false" />
+        <provider
+            android:name="com.betanet.betanet.InterestsProvider"
+            android:authorities="com.betanet.betanet"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name="com.betanet.betanet.ProfessionsProvider"
+            android:authorities="com.betanet.betanet"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name="com.betanet.betanet.AddAchievements" />
+        <activity android:name="com.betanet.betanet.AddInstitution" />
+        <activity android:name="com.betanet.betanet.EditableProfile" />
+        <activity
+            android:name="com.betanet.betanet.StaticProfile"
+            android:label="@string/title_activity_static_profile"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

@@ -6,46 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".AddInterests">
 
-<TextView
-    android:id="@+id/addInterestsTextView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="24dp"
-    android:layout_marginStart="24dp"
-    android:text="@string/add_interests"
-    android:textColor="@color/black"
-    android:textSize="24sp"
-    android:elevation="8dp"
-    app:layout_constraintBaseline_toBaselineOf="@+id/saveInterestsButton"
-    app:layout_constraintStart_toEndOf="@+id/interestsBackToBioButton"
-    tools:text="@string/add_interests" />
+    <TextView
+        android:id="@+id/addInterestsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:elevation="8dp"
+        android:text="@string/add_interests"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/saveInterestsButton"
+        app:layout_constraintStart_toEndOf="@+id/interestsBackToBioButton" />
 
-<Button
-    android:id="@+id/saveInterestsButton"
-    android:layout_width="wrap_content"
-    android:layout_height="40dp"
-    android:layout_marginEnd="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginTop="16dp"
-    android:background="@drawable/rounded"
-    android:text="@string/save"
-    android:textAllCaps="false"
-    android:textColor="#FF0000"
-    android:textSize="16sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/saveInterestsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rounded"
+        android:elevation="16dp"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:onClick="onClickSaveInterests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<Button
-    android:id="@+id/interestsBackToBioButton"
-    android:layout_width="25dp"
-    android:layout_height="20dp"
-    android:layout_gravity="center"
-    android:layout_marginLeft="16dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="8dp"
-    android:background="@drawable/back"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/addInterestsTextView" />
+    <Button
+        android:id="@+id/interestsBackToBioButton"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back"
+        android:onClick="onClickInterestsBackToBio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addInterestsTextView" />
 
     <SearchView
         android:id="@+id/interestsSearchView"
@@ -55,7 +57,25 @@
         android:background="@drawable/bg_white_rounded_search_view"
         android:queryHint="Search Interests"
         android:tag="Search Interests"
+        android:iconifiedByDefault="false"
+        style="@style/TextAppearance.App.TextInputLayout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/addInterestsTextView" />
+
+    <ScrollView
+        android:id="@+id/interestsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/interestsSearchView">
+        <LinearLayout
+            android:id="@+id/interestLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

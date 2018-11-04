@@ -9,8 +9,7 @@
         <!--<item name="windowNoTitle">true</item>-->
     </style>
 
-    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
-    </style>
+    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance"></style>
 
     <style name="BetaNet.TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
         <item name="colorControlNormal">@color/white</item>

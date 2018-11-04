@@ -22,7 +22,6 @@ public class AddSkills extends AppCompatActivity {
     Button backToBioButton;
     Button saveSkillsButton;
     ArrayList<String> skills = new ArrayList<>();
-//    ArrayList<LinearLayout> skillLayoutList = new ArrayList<>();
     ArrayList<ValueWithRemoveButton> skillLayoutList = new ArrayList<>();
     LinearLayout skillLinearLayout;
     SearchView skillsSearchView;
@@ -63,9 +62,7 @@ public class AddSkills extends AppCompatActivity {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             Log.e(TAG, "handleIntent: action_search: " + query);
-//            doMySearch(query);
         } else if (Intent.ACTION_VIEW.equals(intent.getAction())) {
-            // Handle a suggestions click (because the suggestions all use ACTION_VIEW)
             String skill = intent.getDataString();
             Log.e(TAG, "handleIntent: skill = " + skill);
             Uri data = intent.getData();
@@ -79,45 +76,17 @@ public class AddSkills extends AppCompatActivity {
         if (!skills.contains(skill)) {
             skills.add(skill);
             ValueWithRemoveButton l = new ValueWithRemoveButton(this, skill);
-//            LinearLayout l = new LinearLayout(this);
-//            l.setOrientation(LinearLayout.HORIZONTAL);
-//            TextView skillNameTV = new TextView(this);
-//            skillNameTV.setText(skill);
-//            skillNameTV.setPadding(2,2,2,2);
-//            skillNameTV.setTextSize(24);
-//            ImageButton removeButton = new ImageButton(this);
-//            removeButton.setImageResource(R.drawable.ic_close_black_24dp);
-//            removeButton.setBackgroundColor(Color.TRANSPARENT);
-//            l.addView(skillNameTV);
-//            l.addView(removeButton);
-//            removeButton.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    v.getParent();
-//                    int index = skillLayoutList.indexOf(v);
-//                    Log.e(TAG, "onClick: index: " +index);
-//                    Log.e(TAG, "onClick: skill to be removed = " + skills.get(index));
-//                    removeASkill(v.getRootView());
-//                }
-//            });
             skillLayoutList.add(l);
-            ValueWithRemoveButton.OnChangeListener listener = new ValueWithRemoveButton.OnChangeListener() {
-                @Override
-                public void onChange(String val) {
-                    skills.remove(val);
-                    populateSkillLayout();
-                }
-            };
-            l.setOnChangeListener(listener);
+            l.setOnChangeListener(val -> {
+                skills.remove(val);
+                populateSkillLayout();
+            });
             populateSkillLayout();
         }
     }
 
     public void populateSkillLayout() {
         skillLinearLayout.removeAllViews();
-//        for (LinearLayout l : skillLayoutList) {
-//            skillLinearLayout.addView(l);
-//        }
         for (ValueWithRemoveButton l : skillLayoutList) {
             if(skills.contains(l.getValue()))
                 skillLinearLayout.addView(l);

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/mnt/187C7C937C7C6D7E/projects_workspaces/android/BNet/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "E:\\projects_workspaces\\android\\BNet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-rc02.aar/dbb078b0b53352e9693204e5a3e90e78/res/values-large-v4/values-large-v4.xml",
+                    "source": "C:\\Users\\aliab\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0-rc02.aar\\54a0817649beffe3bf82945c775f46e1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/aliabbas/.gradle/caches/transforms-1/files-1.1/design-28.0.0-rc02.aar/9298e4cdd1eba4f6db8dd86cf4f9247c/res/values-large-v4/values-large-v4.xml",
+                    "source": "C:\\Users\\aliab\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0-rc02.aar\\0ef3dcec076c3edaa18a5c81da7e4f46\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
