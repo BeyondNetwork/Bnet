@@ -6,26 +6,23 @@
     density="xhdpi"
     format="10"
     plugin-version="3.2.1"
-    timestamp="1546532777166"
+    timestamp="1546538132609"
     token="-2091315280041217522"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="135" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="55" />
+        duration="0" />
     <task
         name="verifier"
-        duration="4" />
+        duration="0" />
 
-    <artifact
-        location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
     <artifact
         location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
@@ -57,16 +54,16 @@
         location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
+        location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
         location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1546532777166"
+        timestamp="1546538132609"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
         <artifact
             location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
@@ -96,6 +93,9 @@
             type="SPLIT" />
         <artifact
             location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
             location="/home/yash/Documents/CODE/ANDROID/Bnet/app/build/intermediates/instant-run-apk/debug/app-debug.apk"

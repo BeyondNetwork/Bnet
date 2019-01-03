@@ -1,23 +1,21 @@
 package com.betanet.betanet;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -70,22 +68,26 @@ public class Login extends AppCompatActivity {
                         Log.e(TAG, "onResponse: " + response);
                         try {
                             JSONObject jsonObj = new JSONObject(response);
+                            int status = (int) jsonObj.get("status");
 
-                            if (jsonObj.get("status").equals(200)) {
-                                Toast.makeText(Login.this, "Logged in", Toast.LENGTH_LONG).show();
+                            if (status == 200) {
+                                Toast.makeText(Login.this, "Signed in", Toast.LENGTH_LONG).show();
                                 JSONObject user = (JSONObject) jsonObj.get("user");
                                 Log.e(TAG, "onResponse: " + user);
 
-//                                Intent intent = new Intent(Login.this, QuickBio.class);
-//                                intent.putExtra("user_name", user.get("user_name").toString());
-//                                intent.putExtra("email", editTextEmail.getText().toString());
-//                                startActivity(intent);
+                                // storing basic user info
+                                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putString("id", user.get("_id").toString());
+                                editor.putString("user_name", user.get("user_name").toString());
+                                editor.putString("email_id", user.get("email_id").toString());
+                                editor.apply();
+
+                                Intent intent = new Intent(Login.this, QuickBio.class);
+                                startActivity(intent);
                             }
-                            else {
-                                Toast.makeText(Login.this,
-                                        jsonObj.get("status") + ": " + jsonObj.get("err"),
-                                        Toast.LENGTH_LONG).show();
-                            }
+                            else
+                                Toast.makeText(Login.this, status + ": " + jsonObj.get("err"), Toast.LENGTH_LONG).show();
 
                         } catch (JSONException e) {
                             e.printStackTrace();

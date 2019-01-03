@@ -1,8 +1,10 @@
 package com.betanet.betanet;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -78,22 +80,15 @@ public class Register extends AppCompatActivity {
                         Log.e(TAG, "onResponse: " + response);
                         try {
                             JSONObject jsonObj = new JSONObject(response);
+                            int status = (int) jsonObj.get("status");
 
-                            if (jsonObj.get("status").equals(200)) {
-                                Toast.makeText(Register.this, "Registered", Toast.LENGTH_LONG).show();
-                                JSONObject user = (JSONObject) jsonObj.get("user");
-                                Log.e(TAG, "onResponse: " + user);
-
-    //                            Intent intent = new Intent(Register.this, QuickBio.class);
-    //                            intent.putExtra("user_name", editTextName.getText().toString());
-    //                            intent.putExtra("email", editTextEmail.getText().toString());
-    //                            startActivity(intent);
+                            if (status == 200) {
+                                Toast.makeText(Register.this, "Registered, Please Sign in to continue", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(Register.this, Login.class);
+                                startActivity(intent);
                             }
-                            else {
-                                Toast.makeText(Register.this,
-                                        jsonObj.get("status") + ": " + jsonObj.get("err"),
-                                        Toast.LENGTH_LONG).show();
-                            }
+                            else
+                                Toast.makeText(Register.this, status + ": " + jsonObj.get("err"), Toast.LENGTH_LONG).show();
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
