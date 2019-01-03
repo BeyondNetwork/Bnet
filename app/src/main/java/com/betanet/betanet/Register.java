@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -60,86 +61,79 @@ public class Register extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         registerButton = findViewById(R.id.registerButton);
         signInFromRegisterButton = findViewById(R.id.signInFromRegisterButton);
-        editTextName = findViewById(R.id.editTextName);
-        editTextEmail = findViewById(R.id.editTextEmail);
-        editTextPassword = findViewById(R.id.editTextPassword);
-        registerButton = findViewById(R.id.registerButton);
-        signInFromRegisterButton = findViewById(R.id.signInFromRegisterButton);
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // checking credentials
-                if (!editTextEmail.getText().toString().equals("") && !editTextName.getText().toString().equals("") && !editTextPassword.getText().toString().equals("")) {
-                    RequestQueue queue = Volley.newRequestQueue(Register.this);
-                    StringRequest sr = new StringRequest(Request.Method.POST, "http://merchantaliabbas.pythonanywhere.com/register", new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            Log.e(TAG, "onResponse: " + response);
-                            try {
-                                JSONObject jsonObj = new JSONObject(response);
-                                if (jsonObj.getInt("success") == 1) {
-                                    Toast.makeText(Register.this, jsonObj.getString("message"), Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(Register.this, QuickBio.class);
+        registerButton.setOnClickListener((view) -> {
 
-                                    intent.putExtra("user_name", editTextName.getText().toString());
-                                    intent.putExtra("email", editTextEmail.getText().toString());
+            if (!editTextEmail.getText().toString().equals("")
+                    && !editTextName.getText().toString().equals("")
+                    && !editTextPassword.getText().toString().equals("")) {
 
-                                    startActivity(intent);
-                                } else {
-                                    Toast.makeText(Register.this, jsonObj.getString("message"), Toast.LENGTH_SHORT).show();
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                registerButton.setEnabled(false);
+
+                RequestQueue queue = Volley.newRequestQueue(Register.this);
+                StringRequest sr = new StringRequest(Request.Method.POST,
+                    "https://shielded-spire-76277.herokuapp.com/register/",
+                    (response) -> {
+                        registerButton.setEnabled(true);
+                        Log.e(TAG, "onResponse: " + response);
+                        try {
+                            JSONObject jsonObj = new JSONObject(response);
+
+                            if (jsonObj.get("status").equals(200)) {
+                                Toast.makeText(Register.this, "Registered", Toast.LENGTH_LONG).show();
+                                JSONObject user = (JSONObject) jsonObj.get("user");
+                                Log.e(TAG, "onResponse: " + user);
+
+    //                            Intent intent = new Intent(Register.this, QuickBio.class);
+    //                            intent.putExtra("user_name", editTextName.getText().toString());
+    //                            intent.putExtra("email", editTextEmail.getText().toString());
+    //                            startActivity(intent);
                             }
+                            else {
+                                Toast.makeText(Register.this,
+                                        jsonObj.get("status") + ": " + jsonObj.get("err"),
+                                        Toast.LENGTH_LONG).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Log.e(TAG, "onErrorResponse: ", error);
-                        }
+                    }, (error) -> {
+                        registerButton.setEnabled(true);
+                        Log.e(TAG, "onErrorResponse: ", error);
                     }) {
-                        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-                        @Override
-                        protected Map<String, String> getParams() {
-                            Map<String, String> params = new HashMap<String, String>();
-                            params.put("user_name", editTextName.getText().toString());
-                            params.put("email_id", editTextEmail.getText().toString());
-                            Log.e(TAG, "getParams: Password " + editTextPassword.getText().toString());
-                            String hash = null;
-                            try {
-                                hash = getHash(editTextPassword.getText().toString());
-                            } catch (NoSuchAlgorithmException e) {
-                                e.printStackTrace();
-                            }
-                            Log.e(TAG, "getParams: hash " + hash);
+                    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                    @Override
+                    protected Map<String, String> getParams() {
+                        Map<String, String> params = new HashMap<>();
+                        params.put("user_name", editTextName.getText().toString());
+                        params.put("email_id", editTextEmail.getText().toString());
+                        try {
+                            String hash = getHash(editTextPassword.getText().toString());
                             params.put("password_hash", hash);
-                            return params;
+                        } catch (NoSuchAlgorithmException e) {
+                            e.printStackTrace();
                         }
+                        return params;
+                    }
 
-                        @Override
-                        public Map<String, String> getHeaders() throws AuthFailureError {
-                            Map<String, String> params = new HashMap<String, String>();
-                            params.put("Content-Type", "application/x-www-form-urlencoded");
-                            return params;
-                        }
-                    };
-                    queue.add(sr);
-                } else {
-                    Toast.makeText(Register.this, "Invalid Credentials", Toast.LENGTH_LONG).show();
-                }
+                    @Override
+                    public Map<String, String> getHeaders() {
+                        Map<String, String> params = new HashMap<>();
+                        params.put("Content-Type", "application/x-www-form-urlencoded");
+                        return params;
+                    }
+                };
+                sr.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                queue.add(sr);
+            } else {
+                Toast.makeText(Register.this, "Invalid Credentials", Toast.LENGTH_LONG).show();
             }
         });
 
-        Intent intent = new Intent(Register.this, QuickBio.class);
-        startActivity(intent);
-
-        signInFromRegisterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Register.this, Login.class);
-                startActivity(intent);
-            }
+        signInFromRegisterButton.setOnClickListener((view) -> {
+            Intent intent = new Intent(Register.this, Login.class);
+            startActivity(intent);
         });
     }
 
@@ -196,8 +190,6 @@ public class Register extends AppCompatActivity {
 // computation time. You should select a value that causes computation
 // to take >100ms.
         final int iterations = 1000;
-
-        // Generate a 256-bit key
         final int outputKeyLength = 256;
 
         SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
@@ -205,18 +197,4 @@ public class Register extends AppCompatActivity {
         SecretKey secretKey = secretKeyFactory.generateSecret(keySpec);
         return secretKey;
     }
-
-    private String get_message(int val) {
-        switch (val) {
-            case 111:
-                return "This email-id has already been registered";
-            case 222:
-                return "This username already exists";
-            case 200:
-                return "User created successfully!\nAn email verification link has been sent to you.";
-            default:
-                return "An error has occurred. Please try again..";
-        }
-    }
-
 }

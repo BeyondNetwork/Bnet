@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -35,7 +36,7 @@ public class Login extends AppCompatActivity {
 
     EditText editTextEmail;
     EditText editTextPassword;
-    TextView forgotPasswordTV;
+    TextView forgotPasswordTextView;
     Button signInButton;
     TextView registerFromLoginTextView;
 
@@ -44,83 +45,87 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        forgotPasswordTV = (TextView) findViewById(R.id.forgotPasswordTV);
-        signInButton = (Button) findViewById(R.id.signInButton);
-        registerFromLoginTextView = (TextView) findViewById(R.id.registerFromLoginTextView);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        forgotPasswordTextView = findViewById(R.id.forgotPasswordTV);
+        signInButton = findViewById(R.id.signInButton);
+        registerFromLoginTextView = findViewById(R.id.registerFromLoginTextView);
 
-        forgotPasswordTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(Login.this, "Forgot Password", Toast.LENGTH_SHORT).show();
-            }
-        });
-        signInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        forgotPasswordTextView.setOnClickListener((view) ->
+            Toast.makeText(Login.this, "Forgot Password", Toast.LENGTH_SHORT).show()
+        );
 
-                if (!editTextEmail.getText().toString().equals("")
-                        && !editTextPassword.getText().toString().equals("")) {
+        signInButton.setOnClickListener((view) -> {
 
-                    RequestQueue queue = Volley.newRequestQueue(Login.this);
-                    StringRequest sr = new StringRequest(Request.Method.POST, "http://merchantaliabbas.pythonanywhere.com/login", new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            Log.e(TAG, "onResponse: " + response);
-                            try {
-                                JSONObject jsonObj = new JSONObject(response);
-                                if (jsonObj.getInt("success") == 1) {
-                                    Toast.makeText(Login.this, "Logged In", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Toast.makeText(Login.this, jsonObj.getString("message"), Toast.LENGTH_SHORT).show();
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+            if (!editTextEmail.getText().toString().equals("")
+                    && !editTextPassword.getText().toString().equals("")) {
+
+                signInButton.setEnabled(false);
+
+                RequestQueue queue = Volley.newRequestQueue(Login.this);
+                StringRequest sr = new StringRequest(Request.Method.POST,
+                    "https://shielded-spire-76277.herokuapp.com/login/",
+                    (response) -> {
+                        signInButton.setEnabled(true);
+                        Log.e(TAG, "onResponse: " + response);
+                        try {
+                            JSONObject jsonObj = new JSONObject(response);
+
+                            if (jsonObj.get("status").equals(200)) {
+                                Toast.makeText(Login.this, "Logged in", Toast.LENGTH_LONG).show();
+                                JSONObject user = (JSONObject) jsonObj.get("user");
+                                Log.e(TAG, "onResponse: " + user);
+
+//                                Intent intent = new Intent(Login.this, QuickBio.class);
+//                                intent.putExtra("user_name", user.get("user_name").toString());
+//                                intent.putExtra("email", editTextEmail.getText().toString());
+//                                startActivity(intent);
                             }
-                        }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Log.e(TAG, "onErrorResponse: ", error);
-                        }
-                    }) {
-                        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-                        @Override
-                        protected Map<String, String> getParams() {
-                            Map<String, String> params = new HashMap<String, String>();
-                            params.put("email_id", editTextEmail.getText().toString());
-                            Log.e(TAG, "getParams: Password " + editTextPassword.getText().toString() );
-                            String hash = null;
-                            try {
-                                hash = getHash(editTextPassword.getText().toString());
-                            } catch (NoSuchAlgorithmException e) {
-                                e.printStackTrace();
+                            else {
+                                Toast.makeText(Login.this,
+                                        jsonObj.get("status") + ": " + jsonObj.get("err"),
+                                        Toast.LENGTH_LONG).show();
                             }
-                            Log.e(TAG, "getParams: hash " + hash);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                }, (error) -> {
+                    signInButton.setEnabled(true);
+                    Log.e(TAG, "onErrorResponse: ", error);
+                }) {
+                    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                    @Override
+                    protected Map<String, String> getParams() {
+                        Map<String, String> params = new HashMap<>();
+                        params.put("email_id", editTextEmail.getText().toString());
+                        try {
+                            String hash = getHash(editTextPassword.getText().toString());
                             params.put("password_hash", hash);
-                            return params;
+                        } catch (NoSuchAlgorithmException e) {
+                            e.printStackTrace();
                         }
+                        return params;
+                    }
 
-                        @Override
-                        public Map<String, String> getHeaders() throws AuthFailureError {
-                            Map<String, String> params = new HashMap<String, String>();
-                            params.put("Content-Type", "application/x-www-form-urlencoded");
-                            return params;
-                        }
-                    };
-                    queue.add(sr);
-                } else {
-                    Toast.makeText(Login.this, "Invalid Credentials", Toast.LENGTH_LONG).show();
-                }
+                    @Override
+                    public Map<String, String> getHeaders() {
+                        Map<String, String> params = new HashMap<>();
+                        params.put("Content-Type", "application/x-www-form-urlencoded");
+                        return params;
+                    }
+                };
+                sr.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                queue.add(sr);
+            } else {
+                Toast.makeText(Login.this, "Invalid Credentials", Toast.LENGTH_LONG).show();
             }
         });
-        registerFromLoginTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Login.this, Register.class);
-                startActivity(intent);
-            }
+
+        registerFromLoginTextView.setOnClickListener((view) -> {
+            Intent intent = new Intent(Login.this, Register.class);
+            startActivity(intent);
         });
     }
 
@@ -130,19 +135,5 @@ public class Login extends AppCompatActivity {
         md.update(password.getBytes(StandardCharsets.UTF_8));
         byte[] digest = md.digest();
         return String.format("%064x", new BigInteger(1, digest));
-    }
-    private String get_message(int val) {
-        switch (val) {
-            case 111:
-                return "No such email_id has been registered";
-            case 222:
-                return "Wrong Password!";
-            case 333:
-                return "Your email id has not been verified as yet.\nPlease go to the verification link sent to you via email.";
-            case 200:
-                return "Welcome!";
-            default:
-                return "An error has occurred. Please try again..";
-        }
     }
 }
