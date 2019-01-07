@@ -1399,6 +1399,7 @@ layout activity_add_interests
 layout activity_add_profession
 layout activity_add_skills
 layout activity_editable_profile
+layout activity_group_info
 layout activity_groups
 layout activity_login
 layout activity_quick_bio

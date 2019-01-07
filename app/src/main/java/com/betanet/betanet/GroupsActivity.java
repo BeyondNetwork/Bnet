@@ -1,6 +1,7 @@
 package com.betanet.betanet;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.content.ContextCompat;
@@ -55,5 +56,10 @@ public class GroupsActivity extends AppCompatActivity {
 
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
+    }
+
+    public void showInfo(View view) {
+        Intent intent = new Intent(this, GroupInfo.class);
+        startActivity(intent);
     }
 }

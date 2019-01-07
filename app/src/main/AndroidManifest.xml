@@ -105,7 +105,8 @@
             android:name=".StaticProfile"
             android:label="@string/title_activity_static_profile"
             android:theme="@style/AppTheme" />
-        <activity android:name=".GroupsActivity"></activity>
+        <activity android:name=".GroupsActivity" />
+        <activity android:name=".GroupInfo"></activity>
     </application>
 
 </manifest>
