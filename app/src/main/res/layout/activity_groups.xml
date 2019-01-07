@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GroupsActivity"
+    android:orientation="vertical">
+
+    <!-- header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/groups_header">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="64dp"
+            android:background="@drawable/circular_logo" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!-- body -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- ChatView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="68dp"
+                android:layout_height="76dp"
+                android:gravity="center"
+                android:src="@drawable/profile_pic"
+                android:textAlignment="center"
+                app:civ_border_color="#CCCCCC"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Designing"
+                        android:textSize="20sp"
+                        android:textColor="#000"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10 DAYS LEFT"
+                        android:textColor="#f00"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Noorain: Hey, I am feeling great..."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <View
+                    android:layout_height="2dp"
+                    android:layout_width="match_parent"
+                    android:background="#ddd"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:gravity="center"
+                android:src="@drawable/profile_pic"
+                android:textAlignment="center"
+                app:civ_border_color="#CCCCCC"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Designing"
+                        android:textSize="20sp"
+                        android:textColor="#000"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10 DAYS LEFT"
+                        android:textColor="#f00"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Noorain: Hey, I am feeling great..."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <View
+                    android:layout_height="2dp"
+                    android:layout_width="match_parent"
+                    android:background="#ddd"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:gravity="center"
+                android:src="@drawable/profile_pic"
+                android:textAlignment="center"
+                app:civ_border_color="#CCCCCC"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Designing"
+                        android:textSize="20sp"
+                        android:textColor="#000"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10 DAYS LEFT"
+                        android:textColor="#f00"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Noorain: Hey, I am feeling great..."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <View
+                    android:layout_height="2dp"
+                    android:layout_width="match_parent"
+                    android:background="#ddd"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POPUP"
+        android:layout_gravity="center"
+        android:onClick="showPopup"/>
+
+    <!-- footer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingRight="32dp"
+        android:paddingLeft="32dp"
+        android:orientation="horizontal"
+        android:background="@drawable/groups_footer">
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/groups_red"
+            android:id="@+id/groups"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/feeds_gray"
+            android:id="@+id/feeds"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/profile_gray"
+            android:id="@+id/profile"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1014,6 +1014,7 @@ drawable back_image
 drawable back_img
 drawable backimg
 drawable bg_white_rounded_search_view
+drawable circular_logo
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1021,6 +1022,12 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable download
+drawable feeds_gray
+drawable feeds_red
+drawable groups_footer
+drawable groups_gray
+drawable groups_header
+drawable groups_red
 drawable ic_achievement
 drawable ic_add_white_24dp
 drawable ic_arrow_forward_red_24dp
@@ -1048,7 +1055,12 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable popup_back
+drawable popup_close
+drawable popup_thumbnail
+drawable profile_gray
 drawable profile_pic
+drawable profile_red
 drawable rounded
 drawable rounded_edit_text
 drawable solid_white_button
@@ -1108,6 +1120,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button
 id buttonPanel
 id center
 id center_horizontal
@@ -1117,6 +1130,7 @@ id checkbox
 id chronometer
 id clip_horizontal
 id clip_vertical
+id close_btn
 id collapseActionView
 id container
 id content
@@ -1151,6 +1165,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id feeds
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1224,6 +1239,7 @@ id professionStaticElementList
 id professionsBackToBioButton
 id professionsScrollView
 id professionsSearchView
+id profile
 id profileImage
 id profileImageLayout
 id profileTitleTextView
@@ -1383,6 +1399,7 @@ layout activity_add_interests
 layout activity_add_profession
 layout activity_add_skills
 layout activity_editable_profile
+layout activity_groups
 layout activity_login
 layout activity_quick_bio
 layout activity_register
@@ -1403,6 +1420,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout editable_element_list
+layout group_join_popup
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action

@@ -114,6 +114,7 @@
             android:name="com.betanet.betanet.StaticProfile"
             android:label="@string/title_activity_static_profile"
             android:theme="@style/AppTheme" />
+        <activity android:name="com.betanet.betanet.GroupsActivity" />
     </application>
 
 </manifest>

@@ -32,4 +32,9 @@ public class Start extends AppCompatActivity {
         Intent i = new Intent(this, AddSkills.class);
         startActivity(i);
     }
+
+    public void groups(View v) {
+        Intent intent = new Intent(this, GroupsActivity.class);
+        startActivity(intent);
+    }
 }
