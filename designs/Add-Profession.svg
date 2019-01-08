@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 667">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Profile_Add-Profession);
+      }
+
+      .cls-2, .cls-5 {
+        fill: #ff563f;
+      }
+
+      .cls-3 {
+        fill: #424242;
+        font-size: 22px;
+      }
+
+      .cls-3, .cls-7 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-4, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        font-size: 14px;
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        stroke: #eee;
+      }
+
+      .cls-7, .cls-8 {
+        fill: #acacac;
+      }
+
+      .cls-7 {
+        font-size: 19px;
+      }
+
+      .cls-9 {
+        stroke: none;
+      }
+
+      .cls-10 {
+        fill: none;
+      }
+
+      .cls-11 {
+        filter: url(#Rectangle_36);
+      }
+    </style>
+    <filter id="Rectangle_36" x="268.57" y="9" width="94.469" height="52.736" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Profile_Add-Profession">
+      <rect width="375" height="667"/>
+    </clipPath>
+  </defs>
+  <g id="Profile_Add-Profession" class="cls-1">
+    <rect class="cls-4" width="375" height="667"/>
+    <path id="ic_arrow_back_24px" class="cls-2" d="M20,11H7.83l5.59-5.59L12,4,4,12l8,8,1.41-1.41L7.83,13H20Z" transform="translate(19 21)"/>
+    <text id="Add_Profession" data-name="Add Profession" class="cls-3" transform="translate(69 40)"><tspan x="0" y="0">Add Profession</tspan></text>
+    <g class="cls-11" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <rect id="Rectangle_36-2" data-name="Rectangle 36" class="cls-4" width="76.469" height="34.736" rx="17.368" transform="translate(275.57 15)"/>
+    </g>
+    <text id="Save" class="cls-5" transform="translate(297 37)"><tspan x="0" y="0">Save</tspan></text>
+    <g id="Rectangle_37" data-name="Rectangle 37" class="cls-6" transform="translate(23 89.7)">
+      <rect class="cls-9" width="329" height="50" rx="25"/>
+      <rect class="cls-10" x="0.5" y="0.5" width="328" height="49" rx="24.5"/>
+    </g>
+    <text id="Search_Profession" data-name="Search Profession" class="cls-7" transform="translate(80.5 121.7)"><tspan x="0" y="0">Search Profession</tspan></text>
+    <path id="ic_search_24px" class="cls-8" d="M15.5,14h-.79l-.28-.27a6.51,6.51,0,1,0-.7.7l.27.28v.79l5,4.99L20.49,19Zm-6,0A4.5,4.5,0,1,1,14,9.5,4.494,4.494,0,0,1,9.5,14Z" transform="translate(50 103.7)"/>
+  </g>
+</svg>
